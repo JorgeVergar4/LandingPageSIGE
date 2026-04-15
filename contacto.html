@@ -4,26 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contacto | SIGE</title>
-    <link rel="stylesheet" href="style.css"> </head>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/index.js" defer></script>
+</head>
 <body>
     <header>
-        <h1>🏎️ Fórmula 1</h1>
+        <div class="header-top">
+            <h1>🏎️ Fórmula 1 - SIGE</h1>
+        </div>
         <nav>
-            <a href="index.html">Inicio</a> |
-            <a href="#">Pilotos</a> |
-            <a href="#">Equipos</a> |
-            <a href="#">Calendario</a> |
-            <a href="#">Resultados</a> |
-            <a href="blog.html">Blog</a> |
-            <a href="nosotros.html">Nosotros</a> |   
-            <a href="contacto.html">Contacto</a> 
-
+            <a href="index.html">Inicio</a>
+            <a href="blog.html">Blog</a>
+            <a href="nosotros.html">Nosotros</a>
+            <a href="contacto.html">Contacto</a>
         </nav>
-    <section class="contact-container">
-        <h1>Contacta con **SIGE**</h1>
-        <p>Déjanos tus datos y nos pondremos en contacto contigo a la brevedad.</p>
+    </header>
+    <main class="contact-container">
+        <section>
+            <h2>Contacta con SIGE</h2>
+            <p>¿Tienes consultas, sugerencias o deseas sumarte a nuestra comunidad? Déjanos un mensaje a continuación.</p>
+        </section>
 
         <form id="contact-form" action="https://formspree.io/f/tu-id-aqui" method="POST">
+            <h3>Envíanos un Mensaje</h3>
             <div class="form-group">
                 <label for="nombre">Nombre Completo</label>
                 <input type="text" id="nombre" name="nombre" placeholder="Ej. Juan Pérez" required>
@@ -42,7 +45,10 @@
             <button type="submit" id="btn-enviar">Enviar Mensaje</button>
         </form>
         <div id="form-status"></div>
-    </section>
+    </main>
 
-    <script src="script.js"></script> </body>
+    <footer>
+        <p>2026 sige - a los pits</p>
+    </footer>
+</body>
 </html>
