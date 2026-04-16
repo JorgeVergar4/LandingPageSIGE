@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servicios - SIGE</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="header-top">
+            <h1>🏎️ Fórmula 1 - SIGE</h1>
+        </div>
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="blog.html">Blog</a>
+            <a href="nosotros.html">Nosotros</a>
+            <a href="contacto.html">Contacto</a>
+            <a href="servicios.html" class="active">Servicios</a>
+        </nav>
+    </header>
+
+    <div class="hero-track">
+        <div class="speed-lines"></div>
+        <div class="f1-car">
+            <span class="car-emoji">🏎️</span>
+        </div>
+    </div>
+
+    <main>
+        <section class="fade-in">
+            <h2>Nuestros Servicios de Alto Rendimiento</h2>
+            <p>Aplicamos la tecnología, precisión y velocidad de la Fórmula 1 para ofrecerte herramientas de gestión de escuderías. Optimiza tus procesos y toma decisiones basadas en datos puros.</p>
+        </section>
+
+        <div class="servicios-grid fade-in">
+            <article>
+                <h3>📊 Telemetría y Análisis Data</h3>
+                <p>Analizamos los datos de tu escudería al milímetro. Detectamos áreas de mejora, cuellos de botella y optimizamos los procesos para ganar esas décimas vitales frente a los competidores.</p>
+            </article>
+
+            <article>
+                <h3>🏁 Simulador Profesional</h3>
+                <p>Entrenamiento y consultoría basada en simuladores. Prepara a tu equipo técnico y de pilotos para cualquier escenario antes de salir a la pista real.</p>
+            </article>
+
+            <article>
+                <h3>⚙️ Optimización Operativa</h3>
+                <p>Mejoramos el flujo de trabajo de tu sistema. Reducimos la resistencia operativa y aumentamos el empuje para que tu gestión acelere sin perder el control de la información.</p>
+            </article>
+
+            <article>
+                <h3>⏱️ Gestión de Pit Stop</h3>
+                <p>La eficiencia se gana en los boxes. Capacitamos a tu equipo en gestión de crisis, trabajo sincronizado de alta presión y ejecución impecable en tiempos mínimos.</p>
+            </article>
+        </div>
+
+        <section class="fade-in" style="margin-top: 40px;">
+            <h2>Cotiza tus Selecciones</h2>
+            <p style="margin-bottom: 20px;">¿Listo para salir a la pista? Déjanos tus datos, selecciona el servicio que necesitas y nuestro equipo de ingenieros se pondrá en contacto contigo.</p>
+            
+            <form action="#" method="POST">
+                <div class="form-group">
+                    <label for="nombre">Piloto / Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" placeholder="Ingresa tu nombre" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="correo">Canal de comunicación (Correo):</label>
+                    <input type="email" id="correo" name="correo" placeholder="ejemplo@correo.com" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="servicio">Servicio a cotizar:</label>
+                    <select id="servicio" name="servicio" required style="width: 100%; padding: 14px; background: var(--f1-dark); color: #fff; border: 1px solid #333; border-radius: var(--radius); font-family: inherit; transition: 0.3s; outline: none;">
+                        <option value="" disabled selected>Selecciona una configuración en los pits...</option>
+                        <option value="telemetria">📊 Telemetría y Análisis Data</option>
+                        <option value="simulador">🏁 Simulador Profesional</option>
+                        <option value="optimizacion">⚙️ Optimización Operativa</option>
+                        <option value="pitstop">⏱️ Gestión de Pit Stop</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="mensaje">Reporte de situación (Mensaje):</label>
+                    <textarea id="mensaje" name="mensaje" rows="4" placeholder="Cuéntanos más sobre lo que necesita tu escudería..." required></textarea>
+                </div>
+                
+                <button type="submit">Enviar Telemetría para Cotización</button>
+            </form>
+        </section>
+    </main>
+
+    <footer class="footer-sige">
+    <div class="container">
+      <div class="footer-content">
+        
+        <div class="footer-section about">
+          <h2 class="logo-text">SIGE<span>F1</span></h2>
+          <p>Optimizando el rendimiento en pista a través de la gestión integral inteligente. El futuro de las escuderías comienza aquí.</p>
+        </div>
+  
+        <div class="footer-section links">
+          <h3>Navegación</h3>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+            <li><a href="nosotros.html">Nosotros</a></li>
+          </ul>
+        </div>
+  
+        <div class="footer-section social">
+          <h3>Sigue el Paddock</h3>
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+      </div>
+  
+      <div class="footer-bottom">
+        &copy; 2026 SIGE | Sistema Integral de Gestión para Escuderías. Todos los derechos reservados.
+      </div>
+    </div>
+  </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const faders = document.querySelectorAll('.fade-in');
+            const appearOptions = { 
+                threshold: 0.1, 
+                rootMargin: "0px 0px -50px 0px" 
+            };
+
+            const appearOnScroll = new IntersectionObserver(function(entries, observer) {
+                entries.forEach(entry => {
+                    if (!entry.isIntersecting) return;
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                });
+            }, appearOptions);
+
+            faders.forEach(fader => {
+                appearOnScroll.observe(fader);
+                // Si el elemento ya está visible al cargar la página, mostrarlo de inmediato
+                fader.classList.add('visible'); 
+            });
+        });
+    </script>
+</body>
+</html>

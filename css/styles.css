@@ -264,3 +264,18 @@ footer {
 	font-size: 0.8rem;
 	color: #777;
   }
+
+/* Grid para la página de servicios */
+.servicios-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+@media (min-width: 768px) {
+    .servicios-grid { 
+        grid-template-columns: 1fr 1fr; 
+    }
+}
+
