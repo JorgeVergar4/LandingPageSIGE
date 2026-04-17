@@ -1,155 +1,214 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Servicios - SIGE</title>
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Servicios y Precios | SIGE</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <script src="js/index.js" defer></script>
 </head>
-<body>
-    <header>
-        <div class="header-top">
-            <h1>🏎️ Fórmula 1 - SIGE</h1>
-        </div>
-        <nav>
-            <a href="index.html">Inicio</a>
-            <a href="blog.html">Blog</a>
-            <a href="nosotros.html">Nosotros</a>
-            <a href="contacto.html">Contacto</a>
-            <a href="servicios.html" class="active">Servicios</a>
-        </nav>
-    </header>
-
-    <div class="hero-track">
-        <div class="speed-lines"></div>
-        <div class="f1-car">
-            <span class="car-emoji">🏎️</span>
-        </div>
+<body class="page-servicios">
+  <div class="splash-screen" id="splashScreen">
+    <div class="splash-logo">
+      <img src="assets/img/SIGELOGO.PNG" alt="SIGE Loading">
     </div>
+  </div>
+  <header class="site-header">
+    <div class="site-header-inner">
+      <a href="index.html" class="logo-container">
+        <img src="assets/img/SIGELOGO.PNG" alt="Logo SIGE" loading="lazy">
+        <span class="logo-text">Sistema Integral de Escuderias</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-label="Abrir menu" aria-expanded="false">
+        <i class="fa-solid fa-bars" aria-hidden="true"></i>
+      </button>
+      <nav class="main-nav" id="mainNav" aria-label="Principal">
+        <a href="index.html">Inicio</a>
+        <a href="servicios.html" class="active">Servicios y Precios</a>
+        <a href="nosotros.html">Nosotros</a>
+        <a href="blog.html">Blog</a>
+        <a href="contacto.html">Contacto</a>
+      </nav>
+    </div>
+  </header>
 
-    <main>
-        <section class="fade-in">
-            <h2>Nuestros Servicios de Alto Rendimiento</h2>
-            <p>Aplicamos la tecnología, precisión y velocidad de la Fórmula 1 para ofrecerte herramientas de gestión de escuderías. Optimiza tus procesos y toma decisiones basadas en datos puros.</p>
-        </section>
+  <main>
+    <section class="hero">
+      <div class="hero-content fade-in">
+        <p class="hero-subtitle">Suite de alto rendimiento</p>
+        <h1 class="hero-title">Servicios y <span>precios premium</span> para escuderias ambiciosas</h1>
+        <p class="hero-desc">Disena operaciones mas rapidas, previsibles y rentables con tecnologia SIGE pensada para competir bajo presion real de pista.</p>
+        <div class="hero-actions">
+          <a class="btn btn-solid" href="contacto.html">Agendar una demo ejecutiva</a>
+          <a class="btn" href="#planes">Ver planes</a>
+        </div>
+      </div>
+    </section>
 
-        <div class="servicios-grid fade-in">
-            <article>
-                <h3>📊 Telemetría y Análisis Data</h3>
-                <p>Analizamos los datos de tu escudería al milímetro. Detectamos áreas de mejora, cuellos de botella y optimizamos los procesos para ganar esas décimas vitales frente a los competidores.</p>
-            </article>
+    <section class="premium-strip">
+      <div class="container premium-metrics fade-in">
+        <div class="metric-chip"><strong>+42%</strong><span>Decision mas rapida en carrera</span></div>
+        <div class="metric-chip"><strong>99.9%</strong><span>Disponibilidad garantizada</span></div>
+        <div class="metric-chip"><strong>24/7</strong><span>Soporte elite multinivel</span></div>
+        <div class="metric-chip"><strong>7 dias</strong><span>Onboarding inicial SIGE</span></div>
+      </div>
+    </section>
 
-            <article>
-                <h3>🏁 Simulador Profesional</h3>
-                <p>Entrenamiento y consultoría basada en simuladores. Prepara a tu equipo técnico y de pilotos para cualquier escenario antes de salir a la pista real.</p>
-            </article>
-
-            <article>
-                <h3>⚙️ Optimización Operativa</h3>
-                <p>Mejoramos el flujo de trabajo de tu sistema. Reducimos la resistencia operativa y aumentamos el empuje para que tu gestión acelere sin perder el control de la información.</p>
-            </article>
-
-            <article>
-                <h3>⏱️ Gestión de Pit Stop</h3>
-                <p>La eficiencia se gana en los boxes. Capacitamos a tu equipo en gestión de crisis, trabajo sincronizado de alta presión y ejecución impecable en tiempos mínimos.</p>
-            </article>
+    <section class="section">
+      <div class="container">
+        <div class="section-heading fade-in">
+          <p class="eyebrow">Portafolio SIGE</p>
+          <h2 class="section-title">Servicios de <span>alto impacto</span></h2>
+          <p class="section-intro">Cada modulo esta construido para multiplicar consistencia operativa, reducir riesgos y acelerar decisiones en fines de semana de competencia.</p>
         </div>
 
-        <section class="fade-in" style="margin-top: 40px;">
-            <h2>Cotiza tus Selecciones</h2>
-            <p style="margin-bottom: 20px;">¿Listo para salir a la pista? Déjanos tus datos, selecciona el servicio que necesitas y nuestro equipo de ingenieros se pondrá en contacto contigo.</p>
-            
-            <form action="#" method="POST">
-                <div class="form-group">
-                    <label for="nombre">Piloto / Nombre:</label>
-                    <input type="text" id="nombre" name="nombre" placeholder="Ingresa tu nombre" required>
-                </div>
-                
-                <div class="form-group">
-                    <label for="correo">Canal de comunicación (Correo):</label>
-                    <input type="email" id="correo" name="correo" placeholder="ejemplo@correo.com" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="servicio">Servicio a cotizar:</label>
-                    <select id="servicio" name="servicio" required style="width: 100%; padding: 14px; background: var(--f1-dark); color: #fff; border: 1px solid #333; border-radius: var(--radius); font-family: inherit; transition: 0.3s; outline: none;">
-                        <option value="" disabled selected>Selecciona una configuración en los pits...</option>
-                        <option value="telemetria">📊 Telemetría y Análisis Data</option>
-                        <option value="simulador">🏁 Simulador Profesional</option>
-                        <option value="optimizacion">⚙️ Optimización Operativa</option>
-                        <option value="pitstop">⏱️ Gestión de Pit Stop</option>
-                    </select>
-                </div>
-
-                <div class="form-group">
-                    <label for="mensaje">Reporte de situación (Mensaje):</label>
-                    <textarea id="mensaje" name="mensaje" rows="4" placeholder="Cuéntanos más sobre lo que necesita tu escudería..." required></textarea>
-                </div>
-                
-                <button type="submit">Enviar Telemetría para Cotización</button>
-            </form>
-        </section>
-    </main>
-
-    <footer class="footer-sige">
-    <div class="container">
-      <div class="footer-content">
-        
-        <div class="footer-section about">
-          <h2 class="logo-text">SIGE<span>F1</span></h2>
-          <p>Optimizando el rendimiento en pista a través de la gestión integral inteligente. El futuro de las escuderías comienza aquí.</p>
+        <div class="service-list">
+          <article class="card fade-in">
+            <i class="fa-solid fa-stopwatch"></i>
+            <h3>Telemetria en vivo</h3>
+            <p>Seguimiento de KPIs en tiempo real por vuelta, sector, piloto y condiciones de pista.</p>
+          </article>
+          <article class="card fade-in">
+            <i class="fa-solid fa-flag-checkered"></i>
+            <h3>Simulacion de pits</h3>
+            <p>Escenarios dinamicos para evaluar undercut, overcut y degradacion con modelos predictivos de alta precision.</p>
+          </article>
+          <article class="card fade-in">
+            <i class="fa-solid fa-database"></i>
+            <h3>Data warehouse deportivo</h3>
+            <p>Repositorios historicos con trazabilidad de setup, clima, neumaticos y resultados por circuito.</p>
+          </article>
+          <article class="card fade-in">
+            <i class="fa-solid fa-video"></i>
+            <h3>Analisis de video 4K</h3>
+            <p>Integracion de video y datos para revision tecnica post-sesion con hallazgos accionables.</p>
+          </article>
+          <article class="card fade-in">
+            <i class="fa-solid fa-shield-halved"></i>
+            <h3>Gobierno y seguridad</h3>
+            <p>Control de accesos por rol, trazabilidad completa y cumplimiento para equipos con multiples sedes.</p>
+          </article>
+          <article class="card fade-in">
+            <i class="fa-solid fa-people-group"></i>
+            <h3>Command center colaborativo</h3>
+            <p>Sincronizacion entre ingenieria, estrategia y direccion deportiva con alertas inteligentes y SLA definidos.</p>
+          </article>
         </div>
-  
-        <div class="footer-section links">
-          <h3>Navegación</h3>
-          <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="blog.html">Blog</a></li>
-            <li><a href="contacto.html">Contacto</a></li>
-            <li><a href="nosotros.html">Nosotros</a></li>
-          </ul>
+      </div>
+    </section>
+
+    <section class="section" id="planes">
+      <div class="container">
+        <div class="section-heading fade-in">
+          <p class="eyebrow">Precios de los servicios</p>
+          <h2 class="section-title">Planes <span>premium</span></h2>
+          <p class="section-intro">Tres niveles claros para escalar sin friccion: desde estructuras en crecimiento hasta operaciones globales de elite.</p>
         </div>
-  
-        <div class="footer-section social">
-          <h3>Sigue el Paddock</h3>
-          <div class="social-icons">
-            <a href="#"><i class="fab fa-instagram"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
-            <a href="#"><i class="fab fa-linkedin-in"></i></a>
-            <a href="#"><i class="fab fa-youtube"></i></a>
+
+        <div class="pricing-grid">
+          <article class="pricing-card fade-in">
+            <h3>F2 Challenger</h3>
+            <p class="price">$4,500<span>/mes</span></p>
+            <ul class="pricing-features">
+              <li><i class="fa-solid fa-check"></i> Telemetria para 2 monoplazas</li>
+              <li><i class="fa-solid fa-check"></i> Dashboard por sesion</li>
+              <li><i class="fa-solid fa-check"></i> Reportes semanales</li>
+              <li><i class="fa-solid fa-check"></i> Soporte horario laboral</li>
+            </ul>
+            <a href="contacto.html" class="btn">Solicitar plan</a>
+          </article>
+
+          <article class="pricing-card popular fade-in">
+            <span class="pricing-tag">Mas elegido</span>
+            <h3>F1 Constructor</h3>
+            <p class="price">$12,900<span>/mes</span></p>
+            <ul class="pricing-features">
+              <li><i class="fa-solid fa-check"></i> Telemetria avanzada ilimitada</li>
+              <li><i class="fa-solid fa-check"></i> IA para estrategia de pits</li>
+              <li><i class="fa-solid fa-check"></i> Almacenamiento 10 TB</li>
+              <li><i class="fa-solid fa-check"></i> Soporte tecnico 24/7</li>
+            </ul>
+            <a href="contacto.html" class="btn btn-solid">Elegir constructor</a>
+          </article>
+
+          <article class="pricing-card fade-in">
+            <h3>Enterprise</h3>
+            <p class="price">Custom<span>/anual</span></p>
+            <ul class="pricing-features">
+              <li><i class="fa-solid fa-check"></i> Implementacion a medida</li>
+              <li><i class="fa-solid fa-check"></i> Integracion on-prem y cloud</li>
+              <li><i class="fa-solid fa-check"></i> Equipo de consultoria dedicado</li>
+              <li><i class="fa-solid fa-check"></i> Roadmap tecnologico conjunto</li>
+            </ul>
+            <a href="contacto.html" class="btn">Hablar con ventas</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-cta">
+      <div class="container">
+        <article class="cta-panel fade-in">
+          <p class="cta-kicker">Decision de negocio</p>
+          <h2 class="cta-title">Tu ventaja competitiva empieza con <span>SIGE</span></h2>
+          <p class="cta-desc">Agenda una sesion estrategica y recibe una propuesta de implementacion con roadmap tecnico, alcance y retorno estimado para tu escuderia.</p>
+          <div class="cta-actions">
+            <a class="btn btn-solid" href="contacto.html">Solicitar propuesta premium</a>
+            <a class="btn" href="blog.html">Revisar casos y analisis</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="sponsors">
+      <div class="container">
+        <p class="sponsors-heading">Escuderias que inspiran nuestro estandar</p>
+        <div class="sponsor-carousel" aria-label="Escuderias destacadas">
+          <div class="sponsor-track">
+            <div class="sponsor-logo"><img src="assets/img/ferrari.png" alt="Ferrari"></div>
+            <div class="sponsor-logo"><img src="assets/svg/mclaren.svg" alt="McLaren"></div>
+            <div class="sponsor-logo"><img src="assets/img/Porsche-logo.png" alt="Porsche"></div>
+            <div class="sponsor-logo"><img src="assets/img/RedBullRacing.png" alt="Red Bull Racing"></div>
+            <div class="sponsor-logo"><img src="assets/img/ferrari.png" alt="Ferrari"></div>
+            <div class="sponsor-logo"><img src="assets/svg/mclaren.svg" alt="McLaren"></div>
+            <div class="sponsor-logo"><img src="assets/img/Porsche-logo.png" alt="Porsche"></div>
+            <div class="sponsor-logo"><img src="assets/img/RedBullRacing.png" alt="Red Bull Racing"></div>
           </div>
         </div>
       </div>
-  
-      <div class="footer-bottom">
-        &copy; 2026 SIGE | Sistema Integral de Gestión para Escuderías. Todos los derechos reservados.
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <div>
+        <a href="index.html" class="logo-container"><img src="assets/img/SIGELOGO.PNG" alt="Logo SIGE" loading="lazy"></a>
+        <p>Plataforma premium para operaciones deportivas, analitica avanzada y decisiones estrategicas de carrera.</p>
+      </div>
+      <div>
+        <h3 class="footer-title">Navegacion</h3>
+        <ul class="footer-links">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="servicios.html">Servicios y Precios</a></li>
+          <li><a href="nosotros.html">Nosotros</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="footer-title">Comunidad</h3>
+        <div class="social-icons">
+          <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+        </div>
       </div>
     </div>
+    <div class="footer-bottom"><div class="container"><span>2026 SIGE. Sistema Integral de Escuderias.</span><span>Designed for race intelligence</span></div></div>
   </footer>
-
-    <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            const faders = document.querySelectorAll('.fade-in');
-            const appearOptions = { 
-                threshold: 0.1, 
-                rootMargin: "0px 0px -50px 0px" 
-            };
-
-            const appearOnScroll = new IntersectionObserver(function(entries, observer) {
-                entries.forEach(entry => {
-                    if (!entry.isIntersecting) return;
-                    entry.target.classList.add('visible');
-                    observer.unobserve(entry.target);
-                });
-            }, appearOptions);
-
-            faders.forEach(fader => {
-                appearOnScroll.observe(fader);
-                // Si el elemento ya está visible al cargar la página, mostrarlo de inmediato
-                fader.classList.add('visible'); 
-            });
-        });
-    </script>
 </body>
 </html>
+
+

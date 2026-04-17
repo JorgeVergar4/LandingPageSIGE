@@ -1,88 +1,184 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contacto | SIGE</title>
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <script src="js/index.js" defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contacto | SIGE</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <script src="js/index.js" defer></script>
 </head>
-<body>
-    <header>
-        <div class="header-top">
-            <h1>🏎️ Fórmula 1 - SIGE</h1>
+<body class="page-contacto">
+  <div class="splash-screen" id="splashScreen">
+    <div class="splash-logo">
+      <img src="assets/img/SIGELOGO.PNG" alt="SIGE Loading">
+    </div>
+  </div>
+  <header class="site-header">
+    <div class="site-header-inner">
+      <a href="index.html" class="logo-container">
+        <img src="assets/img/SIGELOGO.PNG" alt="Logo SIGE" loading="lazy">
+        <span class="logo-text">Sistema Integral de Escuderias</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-label="Abrir menu" aria-expanded="false">
+        <i class="fa-solid fa-bars" aria-hidden="true"></i>
+      </button>
+      <nav class="main-nav" id="mainNav" aria-label="Principal">
+        <a href="index.html">Inicio</a>
+        <a href="servicios.html">Servicios y Precios</a>
+        <a href="nosotros.html">Nosotros</a>
+        <a href="blog.html">Blog</a>
+        <a href="contacto.html" class="active">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-content fade-in">
+        <p class="hero-subtitle">Hablemos de rendimiento</p>
+        <h1 class="hero-title">Contacto <span>corporativo</span></h1>
+        <p class="hero-desc">Comparte tu objetivo competitivo y diseniamos una propuesta premium con alcance tecnico, tiempos de ejecucion y valor estimado.</p>
+        <div class="hero-actions">
+          <a class="btn btn-solid" href="#formulario">Iniciar diagnostico</a>
+          <a class="btn" href="servicios.html">Ver servicios</a>
         </div>
-        <nav>
-            <a href="index.html">Inicio</a>
-            <a href="blog.html">Blog</a>
-            <a href="nosotros.html">Nosotros</a>
-            <a href="contacto.html">Contacto</a>
-            <a href="servicios.html">Servicios</a>
-        </nav>
-    </header>
-    <main class="contact-container">
-        <section>
-            <h2>Contacta con SIGE</h2>
-            <p>¿Tienes consultas, sugerencias o deseas sumarte a nuestra comunidad? Déjanos un mensaje a continuación.</p>
-        </section>
+      </div>
+    </section>
 
-        <form id="contact-form" action="https://formspree.io/f/tu-id-aqui" method="POST">
-            <h3>Envíanos un Mensaje</h3>
-            <div class="form-group">
-                <label for="nombre">Nombre Completo</label>
-                <input type="text" id="nombre" name="nombre" placeholder="Ej. Juan Pérez" required>
-            </div>
+    <section class="premium-strip">
+      <div class="container premium-metrics fade-in">
+        <div class="metric-chip"><strong>24h</strong><span>Respuesta comercial inicial</span></div>
+        <div class="metric-chip"><strong>7 dias</strong><span>Plan de implementacion</span></div>
+        <div class="metric-chip"><strong>Global</strong><span>Soporte para escuderias</span></div>
+        <div class="metric-chip"><strong>99.9%</strong><span>Compromiso operativo</span></div>
+      </div>
+    </section>
 
-            <div class="form-group">
-                <label for="email">Correo Electrónico</label>
-                <input type="email" id="email" name="email" placeholder="correo@ejemplo.com" required>
-            </div>
+    <section class="section" id="formulario">
+      <div class="container contact-grid">
+        <article class="card fade-in">
+          <p class="eyebrow">Canales oficiales</p>
+          <h2 class="section-title">Conecta con <span>SIGE</span></h2>
+          <p>Nuestro equipo combina estrategia y tecnologia para activar operaciones mas eficientes desde el primer sprint.</p>
+          <ul class="contact-list">
+            <li><i class="fa-solid fa-map-pin"></i> Paddock Club VIP, Monaco</li>
+            <li><i class="fa-solid fa-envelope"></i> elite@sige-f1.com</li>
+            <li><i class="fa-solid fa-phone"></i> +377 12 34 56 78</li>
+          </ul>
+          <ul class="premium-list">
+            <li><i class="fa-solid fa-check"></i> Workshop tecnico inicial con stakeholders</li>
+            <li><i class="fa-solid fa-check"></i> Priorizacion por impacto y esfuerzo</li>
+            <li><i class="fa-solid fa-check"></i> Hoja de ruta con entregables y KPIs</li>
+          </ul>
+        </article>
 
-            <div class="form-group">
-                <label for="mensaje">Mensaje</label>
-                <textarea id="mensaje" name="mensaje" rows="5" placeholder="¿En qué podemos ayudarte?" required></textarea>
-            </div>
+        <form class="form-card fade-in" action="#">
+          <label for="nombre">Nombre / Escuderia</label>
+          <input type="text" id="nombre" name="nombre" required>
 
-            <button type="submit" id="btn-enviar">Enviar Mensaje</button>
+          <label for="email">Correo corporativo</label>
+          <input type="email" id="email" name="email" required>
+
+          <label for="rol">Rol en la organizacion</label>
+          <input type="text" id="rol" name="rol" placeholder="CEO, CTO, Director Deportivo" required>
+
+          <label for="mensaje">Mensaje</label>
+          <textarea id="mensaje" name="mensaje" rows="6" required></textarea>
+
+          <button type="submit" class="btn btn-solid">Enviar mensaje</button>
         </form>
-        <div id="form-status"></div>
-    </main>
+      </div>
+    </section>
 
-    <footer class="footer-sige">
-        <div class="container">
-          <div class="footer-content">
-            
-            <div class="footer-section about">
-              <h2 class="logo-text">SIGE<span>F1</span></h2>
-              <p>Optimizando el rendimiento en pista a través de la gestión integral inteligente. El futuro de las escuderías comienza aquí.</p>
-            </div>
-      
-            <div class="footer-section links">
-              <h3>Navegación</h3>
-              <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="blog.html">Blog</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
-                <li><a href="nosotros.html">Nosotros</a></li>
-              </ul>
-            </div>
-      
-            <div class="footer-section social">
-              <h3>Sigue el Paddock</h3>
-              <div class="social-icons">
-                <a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
-                <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                <a href="#"><i class="fab fa-youtube"></i></a>
-              </div>
-            </div>
+    <section class="section">
+      <div class="container">
+        <div class="section-heading fade-in">
+          <p class="eyebrow">Proceso SIGE</p>
+          <h2 class="section-title">De contacto a <span>resultado</span> en tres pasos</h2>
+        </div>
+        <div class="service-list">
+          <article class="card fade-in">
+            <i class="fa-solid fa-magnifying-glass-chart"></i>
+            <h3>1. Diagnostico ejecutivo</h3>
+            <p>Mapeamos contexto deportivo, stack actual y objetivos para definir la oportunidad de mayor impacto.</p>
+          </article>
+          <article class="card fade-in">
+            <i class="fa-solid fa-list-check"></i>
+            <h3>2. Plan premium</h3>
+            <p>Presentamos propuesta con alcance, roadmap, riesgos controlados y metas cuantificables por fase.</p>
+          </article>
+          <article class="card fade-in">
+            <i class="fa-solid fa-flag-checkered"></i>
+            <h3>3. Ejecucion y mejora continua</h3>
+            <p>Implementamos con seguimiento semanal para asegurar adopcion, estabilidad y retorno operativo real.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-cta">
+      <div class="container">
+        <article class="cta-panel fade-in">
+          <p class="cta-kicker">Proximo movimiento</p>
+          <h2 class="cta-title">Tu escuderia puede operar al nivel <span>SIGE</span></h2>
+          <p class="cta-desc">Cuanto antes empecemos, antes conviertes datos y tecnologia en resultados deportivos sostenibles.</p>
+          <div class="cta-actions">
+            <a class="btn btn-solid" href="#formulario">Enviar briefing ahora</a>
+            <a class="btn" href="blog.html">Ver analisis especializados</a>
           </div>
-      
-          <div class="footer-bottom">
-            &copy; 2026 SIGE | Sistema Integral de Gestión para Escuderías. Todos los derechos reservados.
+        </article>
+      </div>
+    </section>
+
+    <section class="sponsors">
+      <div class="container">
+        <p class="sponsors-heading">Escuderias que marcan el ritmo competitivo</p>
+        <div class="sponsor-carousel" aria-label="Escuderias destacadas">
+          <div class="sponsor-track">
+            <div class="sponsor-logo"><img src="assets/img/ferrari.png" alt="Ferrari"></div>
+            <div class="sponsor-logo"><img src="assets/svg/mclaren.svg" alt="McLaren"></div>
+            <div class="sponsor-logo"><img src="assets/img/Porsche-logo.png" alt="Porsche"></div>
+            <div class="sponsor-logo"><img src="assets/img/RedBullRacing.png" alt="Red Bull Racing"></div>
+            <div class="sponsor-logo"><img src="assets/img/ferrari.png" alt="Ferrari"></div>
+            <div class="sponsor-logo"><img src="assets/svg/mclaren.svg" alt="McLaren"></div>
+            <div class="sponsor-logo"><img src="assets/img/Porsche-logo.png" alt="Porsche"></div>
+            <div class="sponsor-logo"><img src="assets/img/RedBullRacing.png" alt="Red Bull Racing"></div>
           </div>
         </div>
-      </footer>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <div>
+        <a href="index.html" class="logo-container"><img src="assets/img/SIGELOGO.PNG" alt="Logo SIGE" loading="lazy"></a>
+        <p>Consultoria y tecnologia para equipos que buscan eficiencia operativa y ventaja competitiva real.</p>
+      </div>
+      <div>
+        <h3 class="footer-title">Navegacion</h3>
+        <ul class="footer-links">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="servicios.html">Servicios y Precios</a></li>
+          <li><a href="nosotros.html">Nosotros</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="footer-title">Comunidad</h3>
+        <div class="social-icons">
+          <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom"><div class="container"><span>2026 SIGE. Sistema Integral de Escuderias.</span><span>Contact for high-performance ops</span></div></div>
+  </footer>
 </body>
 </html>
+
+
