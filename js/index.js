@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const navLinks = document.querySelectorAll(".main-nav a");
     const splash = document.getElementById("splashScreen");
 
-    // Splash screen management - show on every reload of home page
+    // Splash screen management - show only on first visit
     const showSplash = () => {
         if (!splash) return;
 
@@ -14,6 +14,14 @@ document.addEventListener("DOMContentLoaded", () => {
         const isHome = currentPage === "index.html" || currentPage === "";
 
         if (!isHome) {
+            splash.style.display = "none";
+            return;
+        }
+
+        // Check if splash has already been shown using localStorage
+        const splashShown = localStorage.getItem("sigeLogoSplashShown");
+        
+        if (splashShown) {
             splash.style.display = "none";
             return;
         }
@@ -27,6 +35,8 @@ document.addEventListener("DOMContentLoaded", () => {
             body.classList.remove("splash-active");
             setTimeout(() => {
                 splash.style.display = "none";
+                // Mark that splash has been shown
+                localStorage.setItem("sigeLogoSplashShown", "true");
             }, 800);
         }, 3000);
     };
