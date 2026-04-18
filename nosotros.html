@@ -1,60 +1,226 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nosotros | SIGE</title>
-    <link rel="stylesheet" href="css/styles.css">
-    <script src="js/index.js" defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nosotros | SIGE</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <script src="js/index.js" defer></script>
 </head>
-<body>
+<body class="page-nosotros">
+  <div class="splash-screen" id="splashScreen">
+    <div class="splash-logo">
+      <img src="assets/img/SIGELOGO.PNG" alt="SIGE Loading">
+    </div>
+  </div>
+  <header class="site-header">
+    <div class="site-header-inner">
+      <a href="index.html" class="logo-container">
+        <img src="assets/img/SIGELOGO.PNG" alt="Logo SIGE" loading="lazy">
+        <span class="logo-text">Sistema Integral de Escuderias</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-label="Abrir menu" aria-expanded="false">
+        <i class="fa-solid fa-bars" aria-hidden="true"></i>
+      </button>
+      <nav class="main-nav" id="mainNav" aria-label="Principal">
+        <a href="index.html">Inicio</a>
+        <a href="servicios.html">Servicios y Precios</a>
+        <a href="nosotros.html" class="active">Nosotros</a>
+        <a href="blog.html">Blog</a>
+        <a href="contacto.html">Contacto</a>
+      </nav>
+    </div>
+  </header>
 
-    <header>
-        <div class="header-top">
-            <h1>🏎️ Fórmula 1 - SIGE</h1>
+  <main>
+    <section class="hero">
+      <div class="hero-content fade-in">
+        <p class="hero-subtitle">Talento de alto impacto</p>
+        <h1 class="hero-title">El equipo que construye la <span>ventaja SIGE</span></h1>
+        <p class="hero-desc">Somos desarrolladores full-stack enfocados en rendimiento, confiabilidad y experiencia premium para escuderias que no negocian resultados.</p>
+        <div class="hero-actions">
+          <a class="btn btn-solid" href="contacto.html">Trabajar con SIGE</a>
+          <a class="btn" href="servicios.html">Ver nuestras capacidades</a>
         </div>
-        <nav>
-            <a href="index.html">Inicio</a>
-            <a href="blog.html">Blog</a>
-            <a href="nosotros.html">Nosotros</a>
-            <a href="contacto.html">Contacto</a>
-        </nav>
-    </header>
+      </div>
+    </section>
 
-    <main>
-        <section>
-            <h2>¿Quiénes Somos?</h2>
-            <p>
-                En <strong>SIGE</strong> somos un equipo de desarrolladores y entusiastas del deporte motor, dedicados a construir 
-                la plataforma más sólida y moderna para la gestión de datos de Fórmula 1. Nacimos de la pasión por la velocidad y la tecnología.
-            </p>
-        </section>
+    <section class="premium-strip">
+      <div class="container premium-metrics fade-in">
+        <div class="metric-chip"><strong>4</strong><span>Desarrolladores full-stack</span></div>
+        <div class="metric-chip"><strong>100%</strong><span>Foco en calidad productiva</span></div>
+        <div class="metric-chip"><strong>24/7</strong><span>Compromiso con operaciones</span></div>
+        <div class="metric-chip"><strong>1 stack</strong><span>Vision tecnica unificada</span></div>
+      </div>
+    </section>
 
-        <section>
-            <h2>Nuestra Historia y Propósito</h2>
-            <p>
-                El proyecto surgió en 2026 al detectar la necesidad de los espectadores, mecánicos y analistas de contar con una herramienta 
-                que centralizara grandes volúmenes de datos del automovilismo. Nuestro propósito principal es transformar cifras complejas 
-                en información digerible y valiosa para la comunidad automovilística.
-            </p>
-        </section>
+    <section class="section">
+      <div class="container">
+        <div class="section-heading fade-in">
+          <p class="eyebrow">Equipo base</p>
+          <h2 class="section-title">Perfil de los <span>desarrolladores</span></h2>
+          <p class="section-intro">Cada perfil combina estrategia de producto, ingenieria full-stack y estandares de entrega premium para acelerar resultados reales.</p>
+        </div>
 
-        <section>
-            <h2>Misión y Visión</h2>
-            <p>
-                <strong>Misión:</strong> Proveer información clara, rápida y precisa a los fanáticos y profesionales del deporte, integrando 
-                estadísticas en un diseño intuitivo y moderno de alto rendimiento.
-            </p>
-            <p>
-                <strong>Visión:</strong> Consolidarnos como el sistema no oficial líder a nivel hispanohablante para la consulta, 
-                análisis y seguimiento de las competiciones de Fórmula 1.
-            </p>
-        </section>
-    </main>
+        <div class="team-layout">
+          <figure class="team-photo fade-in">
+            <img src="assets/img/fernandoanimado.png" alt="Fernando Villalon" loading="lazy">
+          </figure>
+          <article class="card fade-in">
+            <p class="team-role">Desarrollador Full-Stack SIGE</p>
+            <h3 class="team-name">Fernando Villalon</h3>
+            <p>Fernando lidera la construccion tecnica de SIGE, integrando arquitectura backend robusta con interfaces de alto impacto visual para operaciones deportivas.</p>
+            <p>Su foco esta en rendimiento, accesibilidad y mantenibilidad: codigo limpio, componentes reutilizables y una experiencia premium coherente en cada pagina.</p>
+            <div class="kpi-strip">
+              <div class="kpi"><strong>Full-Stack</strong><span>Especialidad</span></div>
+              <div class="kpi"><strong>UX + Data</strong><span>Enfoque</span></div>
+              <div class="kpi"><strong>Escalable</strong><span>Arquitectura</span></div>
+            </div>
+          </article>
+        </div>
 
-    <footer>
-        <p>2026 sige - a los pits</p>
-    </footer>
+        <div class="team-layout">
+          <figure class="team-photo fade-in">
+            <img src="assets/img/JorgeVergaraDesarrollador.png" alt="Jorge Vergara" loading="lazy">
+          </figure>
+          <article class="card fade-in">
+            <p class="team-role">Desarrollador Full-Stack SIGE</p>
+            <h3 class="team-name">Jorge Vergara</h3>
+            <p>Jorge esta especializado en arquitectura de sistemas robustos y escalables, garantizando que SIGE procese millones de datos de telemetria con latencia minima.</p>
+            <p>Su expertise en DevOps, cloud infrastructure y optimizacion de bases de datos asegura que la plataforma opere bajo la presion de carreras profesionales con uptime del 99.9%.</p>
+            <div class="kpi-strip">
+              <div class="kpi"><strong>Full-Stack</strong><span>Especialidad</span></div>
+              <div class="kpi"><strong>DevOps & Cloud</strong><span>Enfoque</span></div>
+              <div class="kpi"><strong>99.9% Uptime</strong><span>Compromiso</span></div>
+            </div>
+          </article>
+        </div>
 
+        <div class="team-layout">
+          <figure class="team-photo fade-in">
+            <img src="assets/img/GasparToroDesarrollador.png" alt="Gaspar Toro" loading="lazy">
+          </figure>
+          <article class="card fade-in">
+            <p class="team-role">Desarrollador Full-Stack SIGE</p>
+            <h3 class="team-name">Gaspar Toro</h3>
+            <p>Gaspar impulsa soluciones full-stack para SIGE con foco en arquitectura modular, integraciones API y estabilidad en entornos de alta exigencia.</p>
+            <p>Su trabajo combina backend eficiente, frontend escalable y buenas practicas de seguridad para garantizar entregas continuas y confiables.</p>
+            <div class="kpi-strip">
+              <div class="kpi"><strong>Full-Stack</strong><span>Especialidad</span></div>
+              <div class="kpi"><strong>APIs + UX</strong><span>Enfoque</span></div>
+              <div class="kpi"><strong>Clean Code</strong><span>Compromiso</span></div>
+            </div>
+          </article>
+        </div>
+
+        <div class="team-layout">
+          <figure class="team-photo fade-in">
+            <img src="assets/img/JeanPierreDesarrolador.png" alt="Jean Pierre" loading="lazy">
+          </figure>
+          <article class="card fade-in">
+            <p class="team-role">Desarrollador Full-Stack SIGE</p>
+            <h3 class="team-name">Jean Pierre</h3>
+            <p>Jean Pierre desarrolla componentes full-stack orientados a rendimiento, observabilidad y calidad de datos para operaciones deportivas en tiempo real.</p>
+            <p>Su enfoque tecnico asegura interfaces fluidas, servicios backend robustos y despliegues estables alineados al estandar premium de SIGE.</p>
+            <div class="kpi-strip">
+              <div class="kpi"><strong>Full-Stack</strong><span>Especialidad</span></div>
+              <div class="kpi"><strong>Data + Ops</strong><span>Enfoque</span></div>
+              <div class="kpi"><strong>Performance</strong><span>Compromiso</span></div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-heading fade-in">
+          <p class="eyebrow">Metodo SIGE</p>
+          <h2 class="section-title">Como entregamos <span>excelencia tecnica</span></h2>
+        </div>
+        <div class="service-list">
+          <article class="card fade-in">
+            <i class="fa-solid fa-sitemap"></i>
+            <h3>Arquitectura orientada a negocio</h3>
+            <p>Traducimos objetivos deportivos en decisiones de arquitectura para escalar sin deuda tecnica incontrolable.</p>
+          </article>
+          <article class="card fade-in">
+            <i class="fa-solid fa-vial-circle-check"></i>
+            <h3>Calidad continua</h3>
+            <p>Automatizamos controles y revisiones para que cada release mantenga estabilidad, seguridad y performance.</p>
+          </article>
+          <article class="card fade-in">
+            <i class="fa-solid fa-rocket"></i>
+            <h3>Entrega con impacto</h3>
+            <p>Priorizamos resultados medibles: tiempo de respuesta, eficiencia operativa y decision tecnica con datos confiables.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-cta">
+      <div class="container">
+        <article class="cta-panel fade-in">
+          <p class="cta-kicker">Equipo premium</p>
+          <h2 class="cta-title">Construyamos la proxima version de <span>SIGE</span> juntos</h2>
+          <p class="cta-desc">Si buscas un equipo full-stack que entienda negocio, datos y ejecucion tecnica bajo presion, estas en el lugar correcto.</p>
+          <div class="cta-actions">
+            <a class="btn btn-solid" href="contacto.html">Iniciar una conversacion</a>
+            <a class="btn" href="blog.html">Ver pensamiento tecnico</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="sponsors">
+      <div class="container">
+        <p class="sponsors-heading">Vision inspirada en la elite de escuderias</p>
+        <div class="sponsor-carousel" aria-label="Escuderias destacadas">
+          <div class="sponsor-track">
+            <div class="sponsor-logo"><img src="assets/img/ferrari.png" alt="Ferrari"></div>
+            <div class="sponsor-logo"><img src="assets/svg/mclaren.svg" alt="McLaren"></div>
+            <div class="sponsor-logo"><img src="assets/img/Porsche-logo.png" alt="Porsche"></div>
+            <div class="sponsor-logo"><img src="assets/img/RedBullRacing.png" alt="Red Bull Racing"></div>
+            <div class="sponsor-logo"><img src="assets/img/ferrari.png" alt="Ferrari"></div>
+            <div class="sponsor-logo"><img src="assets/svg/mclaren.svg" alt="McLaren"></div>
+            <div class="sponsor-logo"><img src="assets/img/Porsche-logo.png" alt="Porsche"></div>
+            <div class="sponsor-logo"><img src="assets/img/RedBullRacing.png" alt="Red Bull Racing"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <div>
+        <a href="index.html" class="logo-container"><img src="assets/img/SIGELOGO.PNG" alt="Logo SIGE" loading="lazy"></a>
+        <p>Innovacion digital aplicada al automovilismo, con enfoque en calidad tecnica y experiencia premium.</p>
+      </div>
+      <div>
+        <h3 class="footer-title">Navegacion</h3>
+        <ul class="footer-links">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="servicios.html">Servicios y Precios</a></li>
+          <li><a href="nosotros.html">Nosotros</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="footer-title">Comunidad</h3>
+        <div class="social-icons">
+          <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom"><div class="container"><span>2026 SIGE. Sistema Integral de Escuderias.</span><span>Engineering with race DNA</span></div></div>
+  </footer>
 </body>
 </html>
+
+
