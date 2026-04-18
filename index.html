@@ -9,11 +9,13 @@
   <script src="js/index.js" defer></script>
 </head>
 <body class="page-home">
+
   <div class="splash-screen" id="splashScreen">
     <div class="splash-logo">
       <img src="assets/img/SIGELOGO.PNG" alt="SIGE Loading">
     </div>
   </div>
+
   <header class="site-header">
     <div class="site-header-inner">
       <a href="index.html" class="logo-container">
@@ -35,6 +37,11 @@
 
   <main>
     <section class="hero hero-home">
+      <video autoplay muted loop playsinline class="hero-video">
+        <source src="assets/videos/IndexVideo.mp4" type="video/mp4">
+        Tu navegador no soporta la reproducción de video.
+      </video>
+
       <div class="hero-content fade-in">
         <p class="hero-subtitle">Ingenieria de alto rendimiento</p>
         <h1 class="hero-title">SIGE para <span>escuderias</span> que compiten por todo</h1>
@@ -98,6 +105,66 @@
         </div>
       </div>
     </section>
+
+    <section class="section partners-section">
+      <div class="container">
+        <div class="section-heading fade-in">
+          <p class="eyebrow">Nuestra red técnica</p>
+          <h2 class="section-title">Partners de <span>Escudería</span></h2>
+        </div>
+
+        <div class="partners-grid">
+          
+          <div class="partner-row title-partner fade-in">
+            <div class="title-logo-wrapper">
+              <div class="logo-box">
+                <img src="assets/img/SIGELOGO.PNG" alt="SIGE Logo" class="main-logo-f1">
+              </div>
+              <span class="divider">/</span>
+              <a href="https://aws.amazon.com/es/" target="_blank" rel="noopener noreferrer" class="logo-box">
+                <img src="assets/img/awslogo.png" alt="AWS" class="partner-logo-title">
+              </a>
+            </div>
+          </div>
+
+          <div class="partner-row premium-partners fade-in">
+            <a href="https://www.shell.com/" target="_blank" rel="noopener noreferrer" class="partner-card">
+              <img src="assets/img/LogoShell.png" alt="Shell">
+            </a>
+            <a href="https://www.aramco.com/" target="_blank" rel="noopener noreferrer" class="partner-card">
+              <img src="assets/img/LogoAramco.png" alt="Aramco">
+            </a>
+            <a href="https://www.ibm.com/" target="_blank" rel="noopener noreferrer" class="partner-card">
+              <img src="assets/img/LogoIbm.svg.png" alt="IBM">
+            </a>
+            <a href="https://us.puma.com/" target="_blank" rel="noopener noreferrer" class="partner-card">
+              <img src="assets/img/LogoPuma.png" alt="Puma">
+            </a>
+          </div>
+
+          <div class="partner-row technical-partners fade-in">
+            <a href="https://www.pirelli.com/" target="_blank" rel="noopener noreferrer" class="partner-card-mini">
+              <img src="assets/img/LogoPirelli.svg.png" alt="Pirelli">
+            </a>
+            <a href="https://www.brembo.com/" target="_blank" rel="noopener noreferrer" class="partner-card-mini">
+              <img src="assets/img/LogoBrembo.png" alt="Brembo">
+            </a>
+            <a href="https://www.richardmille.com/" target="_blank" rel="noopener noreferrer" class="partner-card-mini">
+              <img src="assets/img/LogoRichard.png" alt="Richard Mille">
+            </a>
+            <a href="https://www.ray-ban.com/" target="_blank" rel="noopener noreferrer" class="partner-card-mini">
+              <img src="assets/img/LogoRayBan.png" alt="RayBan">
+            </a>
+            <a href="https://www.skf.com/" target="_blank" rel="noopener noreferrer" class="partner-card-mini">
+              <img src="assets/img/LogoSKF.png" alt="SKF">
+            </a>
+            <a href="https://www.ngkntk.com/" target="_blank" rel="noopener noreferrer" class="partner-card-mini">
+              <img src="assets/img/LogoNgkpng.png" alt="NGK">
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
 
   <footer class="site-footer">
@@ -137,5 +204,3 @@
   </footer>
 </body>
 </html>
-
-
