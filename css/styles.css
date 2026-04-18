@@ -303,7 +303,7 @@ p {
     cursor: pointer;
 }
 
-/* --- SECCIÓN HERO (Optimizada con Video) --- */
+/* --- SECCIÓN HERO --- */
 .hero {
     position: relative;
     min-height: 64vh;
@@ -380,7 +380,6 @@ p {
     gap: 12px;
 }
 
-/* Imágenes de fondo solo para páginas internas */
 .page-servicios .hero { background-image: url("https://images.unsplash.com/photo-1505504852924-ac6b4d3c40f5?q=80&w=1920&auto=format&fit=crop"); }
 .page-nosotros .hero,
 .page-blog .hero,
@@ -414,23 +413,101 @@ p {
 .card h3 { font-size: 1.4rem; margin-bottom: 8px; }
 .card p { font-size: 0.94rem; }
 
+/* =========================================================
+   NUEVO: ESTILOS PARA LOS CUADROS DE MÉTRICAS (KPI & CHIPS)
+   Basado en la referencia de los cuadros oscuros F1
+   ========================================================= */
+
+/* 1. Para las franjas debajo del Hero (Ej: +42% Decision rapida) */
+.premium-strip {
+    background-color: rgba(0, 0, 0, 0.2);
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+    padding: 24px 0;
+    margin-bottom: 40px;
+}
+
+.premium-metrics {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    justify-content: center;
+}
+
+.metric-chip {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: rgba(255, 255, 255, 0.03); /* Fondo oscuro elegante */
+    border: 1px solid rgba(255, 255, 255, 0.08); /* Borde sutil */
+    padding: 16px 24px;
+    border-radius: 8px; /* Bordes un poco redondeados */
+    transition: transform var(--transition), border-color var(--transition);
+}
+
+.metric-chip:hover {
+    border-color: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+}
+
+.metric-chip strong {
+    font-family: "Barlow Condensed", sans-serif;
+    font-size: 2rem;
+    color: #fff;
+    line-height: 1;
+}
+
+.metric-chip span {
+    font-size: 0.75rem;
+    color: #a0aab8;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    max-width: 140px;
+    line-height: 1.3;
+}
+
+/* 2. Para los KPIs dentro de las tarjetas (Ej: Full-Stack / Especialidad) */
 .kpi-strip {
     display: grid;
     gap: 12px;
-    grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
     margin-top: 26px;
 }
 
 .kpi {
-    background: rgba(245, 184, 108, 0.06);
-    border: 1px solid rgba(245, 184, 108, 0.2);
-    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.03); /* Fondo oscuro F1 */
+    border: 1px solid rgba(255, 255, 255, 0.08); /* Borde sutil */
+    border-radius: 8px;
     text-align: center;
-    padding: 16px;
+    padding: 18px 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: border-color var(--transition), background var(--transition);
 }
 
-.kpi strong { display: block; font-family: "Barlow Condensed", sans-serif; font-size: 2rem; color: var(--text); }
-.kpi span { text-transform: uppercase; letter-spacing: 0.08em; font-size: 0.72rem; color: var(--text-soft); }
+.kpi:hover {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: rgba(255, 255, 255, 0.15);
+}
+
+.kpi strong { 
+    display: block; 
+    font-family: "Barlow Condensed", sans-serif; 
+    font-size: 1.8rem; /* Titulo principal blanco */
+    color: #ffffff; 
+    font-weight: 800;
+    margin-bottom: 6px;
+    line-height: 1;
+}
+
+.kpi span { 
+    text-transform: uppercase; 
+    letter-spacing: 0.08em; 
+    font-size: 0.7rem; /* Subtitulo gris pequeño */
+    color: #8c96a5; 
+    font-weight: 600;
+}
 
 /* --- SPONSORS (Carrusel original) --- */
 .sponsors {
@@ -499,7 +576,7 @@ p {
     to { transform: translateX(0); }
 }
 
-/* --- PARTNERS SECTION: ESTILO F1 SLICK (Sin Recuadros) --- */
+/* --- PARTNERS SECTION: ESTILO F1 SLICK --- */
 .partners-section {
     background-color: var(--bg-1);
     padding: 100px 0;
@@ -522,7 +599,6 @@ p {
     width: 100%;
 }
 
-/* 1. Title Partner (SIGE / AWS) - Layout Integrado, Sin Caja */
 .title-logo-wrapper {
     display: flex;
     align-items: center;
@@ -549,7 +625,6 @@ p {
     width: 150px !important;
     height: auto !important;
     object-fit: contain;
-    /* Sin filtros oscuros, siempre con su color 100% original */
 }
 
 .divider {
@@ -560,7 +635,6 @@ p {
     margin: 0 10px;
 }
 
-/* 2. Partners Secundarios (Premium & Technical) - Minimalismo Puro */
 .premium-partners { gap: 60px; }
 .technical-partners { gap: 40px; }
 
@@ -578,7 +652,6 @@ p {
     transition: var(--transition);
 }
 
-/* Imágenes con tamaños fijos y COLORES ORIGINALES SIEMPRE */
 .partner-card img {
     max-height: 55px;
     max-width: 160px;
@@ -593,7 +666,6 @@ p {
     transition: var(--transition);
 }
 
-/* HOVER: Solo agrega sombra y un mini zoom, respetando el color */
 .partner-card:hover img, 
 .partner-card-mini:hover img {
     filter: drop-shadow(0 0 10px rgba(218, 31, 38, 0.4));
@@ -608,21 +680,42 @@ p {
 .team-role { color: var(--accent-alt); text-transform: uppercase; letter-spacing: 0.11em; font-size: 0.78rem; font-weight: 700; }
 .team-name { font-size: 2.2rem; margin: 8px 0 14px; }
 
+/* Listas de servicios en columnas */
+.service-list { display: grid; gap: 22px; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+
 .pricing-grid { margin-top: 24px; display: grid; gap: 24px; grid-template-columns: repeat(auto-fit, minmax(255px, 1fr)); }
 .pricing-card { position: relative; padding: 30px 26px; border-radius: var(--radius); border: 1px solid var(--line); background: linear-gradient(165deg, #141a22 0%, #10151d 100%); display: flex; flex-direction: column; gap: 18px; box-shadow: var(--shadow); }
 .pricing-card.popular { border-color: rgba(218, 31, 38, 0.45); background: linear-gradient(180deg, rgba(218, 31, 38, 0.16) 0%, rgba(20, 26, 34, 1) 30%), linear-gradient(165deg, #141a22 0%, #10151d 100%); }
 .pricing-tag { position: absolute; top: -12px; left: 22px; padding: 5px 12px; font-size: 0.66rem; text-transform: uppercase; letter-spacing: 0.1em; font-weight: 700; border-radius: 999px; background: var(--accent); }
 .price { font-family: "Barlow Condensed", sans-serif; font-size: 2.6rem; line-height: 1; }
+.pricing-features { list-style: none; display: grid; gap: 12px; font-size: 0.9rem; margin-bottom: 10px; color: var(--text-soft); }
+.pricing-features i { color: var(--accent); margin-right: 8px; }
 
 .contact-grid { display: grid; gap: 24px; grid-template-columns: minmax(240px, 380px) minmax(280px, 1fr); }
-.form-card { border-radius: var(--radius); border: 1px solid var(--line); background: rgba(255, 255, 255, 0.02); padding: 24px; }
-input, textarea { width: 100%; margin-bottom: 14px; padding: 13px 14px; border: 1px solid var(--line); border-radius: 10px; background: #0f141c; color: var(--text); font: inherit; }
+.contact-list, .premium-list { list-style: none; display: grid; gap: 16px; margin-top: 20px; color: var(--text-soft); }
+.contact-list i, .premium-list i { color: var(--accent); margin-right: 12px; width: 20px; text-align: center; }
+
+.form-card { border-radius: var(--radius); border: 1px solid var(--line); background: rgba(255, 255, 255, 0.02); padding: 30px; display: flex; flex-direction: column; }
+.form-card label { font-size: 0.8rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-soft); margin-bottom: 8px; }
+input, textarea { width: 100%; margin-bottom: 20px; padding: 14px; border: 1px solid var(--line); border-radius: 8px; background: #0f141c; color: var(--text); font: inherit; transition: border-color var(--transition); }
+input:focus, textarea:focus { outline: none; border-color: rgba(218, 31, 38, 0.5); }
 
 .blog-grid { display: grid; gap: 22px; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
-.post-card { border-radius: var(--radius); overflow: hidden; background: var(--surface); border: 1px solid var(--line); transition: var(--transition); }
+.post-card { border-radius: var(--radius); overflow: hidden; background: var(--surface); border: 1px solid var(--line); transition: var(--transition); display: flex; flex-direction: column; }
 .post-card:hover { transform: translateY(-6px); border-color: rgba(245, 184, 108, 0.3); }
 .post-card img { width: 100%; height: 220px; object-fit: cover; }
-.post-content { padding: 22px; }
+.post-content { padding: 22px; display: flex; flex-direction: column; flex-grow: 1; }
+.post-date { font-size: 0.75rem; color: var(--accent-alt); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 8px; font-weight: 700; }
+.post-content h3 { margin-bottom: 12px; font-size: 1.5rem; }
+.post-content p { margin-bottom: 20px; flex-grow: 1; }
+
+.section-cta { text-align: center; }
+.cta-panel { background: linear-gradient(145deg, rgba(255,255,255,0.03) 0%, rgba(0,0,0,0.2) 100%); border: 1px solid var(--line); padding: 60px 40px; border-radius: var(--radius); }
+.cta-kicker { color: var(--accent-alt); font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; font-size: 0.8rem; margin-bottom: 16px; }
+.cta-title { font-size: clamp(2rem, 4vw, 3rem); margin-bottom: 20px; max-width: 800px; margin-left: auto; margin-right: auto; }
+.cta-title span { color: var(--accent); }
+.cta-desc { max-width: 600px; margin: 0 auto 30px; }
+.cta-actions { display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; }
 
 /* --- FOOTER --- */
 .site-footer {
@@ -716,4 +809,5 @@ input, textarea { width: 100%; margin-bottom: 14px; padding: 13px 14px; border: 
     .sponsor-logo { width: clamp(106px, 34vw, 132px); min-height: 58px; padding: 9px 10px; }
     .footer-content { grid-template-columns: 1fr; }
     .footer-bottom .container { text-align: center; flex-direction: column; }
+    .metric-chip { width: 100%; justify-content: center; } /* Para que se vean bien en celular */
 }
